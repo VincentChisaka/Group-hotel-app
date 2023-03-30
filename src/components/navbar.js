@@ -3,12 +3,15 @@ import "/home/vincent/Projects/Group-hotel-app/src/components/navbar.css"
 
 function Navbar() {
       const [active, setActive] = useState("nav__menu");
-        const navToggle = () => {
-          active === 'nav__menu' ? ''
-        }
+      const [toggleIcon, setToggleIcon] = useState("nav__toggler")
 
-        
-    return (
+        const navToggle = () => {
+          active === "nav__menu"
+           ? setActive("nav__menu nav__active")
+           : setActive("nav__menu")
+        }
+      
+  return (
         <nav className="nav">
             <a href="#" className="nav__brand">
                 SUMMER HOTELS
@@ -40,7 +43,7 @@ function Navbar() {
                   </a>
                   </li>
             </ul>
-            <div className="nav__toggler">
+            <div onClick={navToggle} className={toggleIcon}>
                 <div className="line1"></div>
                 <div className="line2"></div>
                 <div className="line3"></div>
