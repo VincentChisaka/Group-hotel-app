@@ -56,5 +56,12 @@ a{
         width: 50%;
         height: 93vh;
         background: transparent;
+        flex-direction: column;
+        transform: translateX(100%); 
     }
+}
+
+/* Nav Active Class */
+.nav__active {
+    transform: translateX(0);
 }
